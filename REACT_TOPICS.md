@@ -12,3 +12,4 @@
     + Bundling
     + Webpack Config
 * Babel
+* React Dev Tools
