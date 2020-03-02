@@ -1,5 +1,12 @@
 var React = require('react');
 var ReactDOM = require('react-dom');
+var Route = require('react-router').Route;
+var Router = require('react-router').Router;
+var IndexRoute = require('react-router').IndexRoute;
+var hashHistory = require('react-router').hashHistory;
+var Main = require('Main');
+
+// import { Main } from 'react'; as of 3-1-2020 unable to get the ES6 syntax to work
 
 /*
  Only thing required by a React Component is
@@ -31,9 +38,7 @@ Smaller testable components lead to better apps that
 have more functionality but w/o complex inflexible code
 */
 
-/* 
-Ch. 10 - Nested Components Pt. 2
-
+/*
 - Types of Components:
 
 1) Presentational Components:
@@ -57,6 +62,8 @@ Ch. 10 - Nested Components Pt. 2
 */
 
 ReactDOM.render(
-  <h1>Boilerplate React App Template!</h1>,
+  <Router history={hashHistory}>
+    <Route path="/" component={Main}></Route>
+  </Router>,
   document.getElementById('app')
 );
