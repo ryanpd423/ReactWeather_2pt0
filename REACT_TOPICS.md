@@ -14,6 +14,7 @@
     + node_modules/
 * NPM
 * Components
+    + TODO: include a screen shot of the Weather app's component layout from Udemy video 
 * Prop
 * State
 * Webpack

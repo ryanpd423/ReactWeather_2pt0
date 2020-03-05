@@ -53,6 +53,9 @@
 	var IndexRoute = __webpack_require__(159).IndexRoute;
 	var hashHistory = __webpack_require__(159).hashHistory;
 	var Main = __webpack_require__(233);
+	var Weather = __webpack_require__(235);
+	var About = __webpack_require__(236);
+	var Examples = __webpack_require__(237);
 
 	// import { Main } from 'react'; as of 3-1-2020 unable to get the ES6 syntax to work
 
@@ -109,10 +112,20 @@
 	    it gives the appearance of this automatic awareness)
 	*/
 
+	// NOTE on <IndexRoute...>, when it is nested inside the Main component like it is
+	// below then it is the component that gets rendered alongside the / Main index component
+	// and that is why it is called an IndexRoute because it's a component that gets rendered with
+	// the Index page of the SPA
 	ReactDOM.render(React.createElement(
 	  Router,
 	  { history: hashHistory },
-	  React.createElement(Route, { path: '/', component: Main })
+	  React.createElement(
+	    Route,
+	    { path: '/', component: Main },
+	    React.createElement(Route, { path: 'about', component: About }),
+	    React.createElement(Route, { path: 'examples', component: Examples }),
+	    React.createElement(IndexRoute, { component: Weather })
+	  )
 	), document.getElementById('app'));
 
 /***/ },
@@ -25789,7 +25802,8 @@
 	                'h2',
 	                null,
 	                'Main Component'
-	            )
+	            ),
+	            this.props.children
 	        );
 	    }
 	});
@@ -25814,20 +25828,106 @@
 	'use strict';
 
 	var React = __webpack_require__(1);
+	var Link = __webpack_require__(159).Link;
 
 	var Nav = React.createClass({
 	    displayName: 'Nav',
 
 	    render: function render() {
 	        return React.createElement(
-	            'h2',
+	            'div',
 	            null,
-	            'Nav Component'
+	            React.createElement(
+	                'h2',
+	                null,
+	                'Nav Component'
+	            ),
+	            React.createElement(
+	                Link,
+	                { to: '/' },
+	                'Get Weather'
+	            ),
+	            React.createElement(
+	                Link,
+	                { to: '/about' },
+	                'About'
+	            ),
+	            React.createElement(
+	                Link,
+	                { to: '/examples' },
+	                'Examples'
+	            )
 	        );
 	    }
 	});
 
 	module.exports = Nav;
+
+/***/ },
+/* 235 */
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+
+	var React = __webpack_require__(1);
+
+	var Weather = React.createClass({
+	    displayName: 'Weather',
+
+	    render: function render() {
+	        return React.createElement(
+	            'h3',
+	            null,
+	            'Weather Component'
+	        );
+	    }
+	});
+
+	module.exports = Weather;
+
+/***/ },
+/* 236 */
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+
+	var React = __webpack_require__(1);
+
+	var About = React.createClass({
+	    displayName: 'About',
+
+	    render: function render() {
+	        return React.createElement(
+	            'h3',
+	            null,
+	            'About Component'
+	        );
+	    }
+	});
+
+	module.exports = About;
+
+/***/ },
+/* 237 */
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+
+	var React = __webpack_require__(1);
+
+	var Examples = React.createClass({
+	    displayName: 'Examples',
+
+	    render: function render() {
+	        return React.createElement(
+	            'h3',
+	            null,
+	            'Examples Component'
+	        );
+	    }
+	});
+
+	module.exports = Examples;
 
 /***/ }
 /******/ ]);

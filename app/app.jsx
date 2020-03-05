@@ -5,6 +5,9 @@ var Router = require('react-router').Router;
 var IndexRoute = require('react-router').IndexRoute;
 var hashHistory = require('react-router').hashHistory;
 var Main = require('Main');
+var Weather = require('Weather');
+var About = require('About');
+var Examples = require('Examples');
 
 // import { Main } from 'react'; as of 3-1-2020 unable to get the ES6 syntax to work
 
@@ -61,9 +64,17 @@ have more functionality but w/o complex inflexible code
     it gives the appearance of this automatic awareness)
 */
 
+// NOTE on <IndexRoute...>, when it is nested inside the Main component like it is
+// below then it is the component that gets rendered alongside the / Main index component
+// and that is why it is called an IndexRoute because it's a component that gets rendered with
+// the Index page of the SPA
 ReactDOM.render(
   <Router history={hashHistory}>
-    <Route path="/" component={Main}></Route>
+    <Route path="/" component={Main}>
+      <Route path="about" component={About}/>
+      <Route path="examples" component={Examples}/>
+      <IndexRoute component={Weather}/> 
+    </Route>
   </Router>,
   document.getElementById('app')
 );
