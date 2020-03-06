@@ -25829,6 +25829,13 @@
 
 	var React = __webpack_require__(1);
 	var Link = __webpack_require__(159).Link;
+	var IndexLink = __webpack_require__(159).IndexLink;
+
+	// When you are using IndexRoute like we are in app.jsx, you have
+	// to also use IndexLink like we have below to link to that route.
+	// Using IndexLink as opposed to regular link will allow us to not
+	// have the link text bold all the time, only after its been clicked on
+	// and before a different link has been clicked
 
 	var Nav = React.createClass({
 	    displayName: 'Nav',
@@ -25843,18 +25850,18 @@
 	                'Nav Component'
 	            ),
 	            React.createElement(
-	                Link,
-	                { to: '/' },
+	                IndexLink,
+	                { to: '/', activeClassName: 'active', activeStyle: { fontWeight: 'bold' } },
 	                'Get Weather'
 	            ),
 	            React.createElement(
 	                Link,
-	                { to: '/about' },
+	                { to: '/about', activeClassName: 'active', activeStyle: { fontWeight: 'bold' } },
 	                'About'
 	            ),
 	            React.createElement(
 	                Link,
-	                { to: '/examples' },
+	                { to: '/examples', activeClassName: 'active', activeStyle: { fontWeight: 'bold' } },
 	                'Examples'
 	            )
 	        );
