@@ -7,7 +7,8 @@
     + starting with ES5 and refactoring to ES6 (classes, arrow functions, etc.)
     + Client-Side Rendering
     + Front-End Routing (React Router)
-    + One-way data binding
+    + React's One-way data binding and what it does...
+      + One-way vs. Two-way data binding, what are they and what are differences?
 * JSX
 * Typescript (transitioning to it from JavaScript)
 * Node
