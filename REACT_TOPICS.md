@@ -14,8 +14,12 @@
 * Node
     + node_modules/
 * NPM
+    + 3rd party libraries:
+      + Axios => API fetching
 * Components
     + TODO: include a screen shot of the Weather app's component layout from Udemy video 
+    + Container Components vs. Presentational Components
+    + Data flow; ex: input into presentational flows up to container to set state and back down to another presentational
 * Prop
 * State
 * Webpack
