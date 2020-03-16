@@ -9,6 +9,7 @@
     + Front-End Routing (React Router)
     + React's One-way data binding and what it does...
       + One-way vs. Two-way data binding, what are they and what are differences?
+    + Conditional Rendering() of Components based on state of our React App
 * JSX
 * Typescript (transitioning to it from JavaScript)
 * Node

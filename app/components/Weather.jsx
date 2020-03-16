@@ -6,30 +6,52 @@ var openWeatherMapApi = require('openWeatherMapApi');
 var Weather = React.createClass({
     getInitialState: function () {
         return {
-            location: 'Miami',
-            temp: 78,
+            isLoading: false,
         }
     },
+
     handleSearch: function(location) {
-        var that = this; // 'this' keyword loses context inside function
+        console.log('handleSearch');
+
+        this.setState({
+            isLoading: true,
+        });
+
+        var that = this; // 'this' keyword loses context inside getTemp function 
+
         openWeatherMapApi.getTemp(location).then(function (temp) {
             that.setState({
                 location: location,
-                temp: temp
+                temp: temp,
+                isLoading: false
             });
         }, function (errorMessage) {
             alert(errorMessage)
+            that.setState({
+                isLoading: false,
+            })
         });
     },
+
     // TODO: continue on with video 34 'Faking...' @ 7:45
     render: function() {
         var temp = this.state.temp;
         var location = this.state.location;
+        var isLoading = this.state.isLoading;
+
+        function renderMessage () {
+            if (isLoading) {
+                return <h2>Fetching Weather...</h2>
+            } else if ((temp && location)) {
+                return <WeatherMessage temp={temp} location={location}/>;
+            }
+        }
+
         return (
             <div>
                 <h3>Weather Component</h3>
                 <WeatherForm onSearch={this.handleSearch}/>
-                <WeatherMessage temp={temp} location={location}/>
+                {renderMessage()}
             </div>
         )
     }

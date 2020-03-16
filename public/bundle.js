@@ -25886,25 +25886,51 @@
 
 	    getInitialState: function getInitialState() {
 	        return {
-	            location: 'Miami',
-	            temp: 78
+	            isLoading: false
 	        };
 	    },
+
 	    handleSearch: function handleSearch(location) {
-	        var that = this; // 'this' keyword loses context inside function
+	        console.log('handleSearch');
+
+	        this.setState({
+	            isLoading: true
+	        });
+
+	        var that = this; // 'this' keyword loses context inside getTemp function 
+
 	        openWeatherMapApi.getTemp(location).then(function (temp) {
 	            that.setState({
 	                location: location,
-	                temp: temp
+	                temp: temp,
+	                isLoading: false
 	            });
 	        }, function (errorMessage) {
 	            alert(errorMessage);
+	            that.setState({
+	                isLoading: false
+	            });
 	        });
 	    },
+
 	    // TODO: continue on with video 34 'Faking...' @ 7:45
 	    render: function render() {
 	        var temp = this.state.temp;
 	        var location = this.state.location;
+	        var isLoading = this.state.isLoading;
+
+	        function renderMessage() {
+	            if (isLoading) {
+	                return React.createElement(
+	                    'h2',
+	                    null,
+	                    'Fetching Weather...'
+	                );
+	            } else if (temp && location) {
+	                return React.createElement(WeatherMessage, { temp: temp, location: location });
+	            }
+	        }
+
 	        return React.createElement(
 	            'div',
 	            null,
@@ -25914,7 +25940,7 @@
 	                'Weather Component'
 	            ),
 	            React.createElement(WeatherForm, { onSearch: this.handleSearch }),
-	            React.createElement(WeatherMessage, { temp: temp, location: location })
+	            renderMessage()
 	        );
 	    }
 	});
