@@ -41,6 +41,8 @@
   * You don't need the React Dev Tools to use the Chrome Debugger (see chrome debugger pics)
   * add `debugger;` on line in .jsx that you want the breakpoint in application to occur at
   * add the `devtool: 'cheap-module-eval-source-map'` as first class object in the `webpack.config.js` file
+    * this module improve the debugging experience by allowing you to view the source files in the debugger and not the transpilled native javascript in the bundle.js file
+    * see the before and after debugger photos
   * run `webpack` to rebuild
   * launch dev tools in chrome process that starts: `fn + f12`
   * choose `Sources` from the devtools menu ribbon
