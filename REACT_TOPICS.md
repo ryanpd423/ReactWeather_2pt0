@@ -1,5 +1,7 @@
 # React Lunch & Learn Topics
 ### Use the udemy video to research and breakdown the below topic points:
+* remote repo push password: `hint: you use it a lot`
+  * need to find a different way to authenticate because entering this password everytime I push is getting old
 * SPA
 * JavaScript
 * React
