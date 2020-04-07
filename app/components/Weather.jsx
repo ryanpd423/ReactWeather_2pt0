@@ -17,6 +17,8 @@ var Weather = React.createClass({
             isLoading: true,
         });
 
+        debugger; //this is how you add a break point to debug with React Dev Tools
+
         var that = this; // 'this' keyword loses context inside getTemp function 
 
         openWeatherMapApi.getTemp(location).then(function (temp) {

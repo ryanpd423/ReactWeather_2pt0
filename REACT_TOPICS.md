@@ -30,3 +30,21 @@
     + Webpack Config
 * Babel
 * React Dev Tools
+  * To run the React Dev Tools on my Mac:
+    * Navigate to dev/react-devtools/
+    * `yarn build:extension`
+    * wait for all of the stuff to build
+    * `yarn run test:chrome`
+    * launch dev tools in chrome process that starts: `fn + f12`
+    * choose `React` from the devtools menu ribbon
+* Debugger (Chrome)
+  * You don't need the React Dev Tools to use the Chrome Debugger (see chrome debugger pics)
+  * add `debugger;` on line in .jsx that you want the breakpoint in application to occur at
+  * add the `devtool: 'cheap-module-eval-source-map'` as first class object in the `webpack.config.js` file
+  * run `webpack` to rebuild
+  * launch dev tools in chrome process that starts: `fn + f12`
+  * choose `Sources` from the devtools menu ribbon
+  * Run your application and fire an event that will cause the breakpoint to get hit
+* Stateless Functional Components:
+  * Syntactic Sugar
+  * Skipped video; revisit and evaulate whether it's needed for a tutorial
