@@ -19,6 +19,8 @@
 * NPM
     + 3rd party libraries:
       + Axios => API fetching
+      + [Express](https://expressjs.com/en/api.html)
+        + purpose of middle-ware api usage like `request.hostname` in the `server.js` file can be found at the Express api page via the link above
 * Components
     + TODO: include a screen shot of the Weather app's component layout from Udemy video 
     + Container Components vs. Presentational Components
