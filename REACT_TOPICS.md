@@ -54,3 +54,12 @@
 * Stateless Functional Components:
   * Syntactic Sugar
   * Skipped video; revisit and evaulate whether it's needed for a tutorial
+* Heroku
+  * PaaS
+  * Deploying our application so that it can run anywhere
+  * Heroku CLI
+    * I installed on Mac via Homebrew
+    * `git push heroku master`
+      * this will push our code up to the server, build it, and deploy it
+      * `heroku open` => will launch the application in a browser
+      * `heroku logs` => displays logs should you have any issues
