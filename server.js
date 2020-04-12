@@ -10,13 +10,13 @@ var app = express();
 const PORT = process.env.PORT || 3000;
 
 // because open weather api only uses http we have to re-route network traffic over https through http
-// app.use(function (request, response, next) {
-//   if (request.headers['x-forwarded-proto'] === 'http') {
-//     next();
-//   } else {
-//     response.redirect('http://' + request.hostname + request.url);
-//   }
-// });
+app.use(function (request, response, next) {
+  if (request.headers['x-forwarded-proto'] === 'http') {
+    next();
+  } else {
+    response.redirect('http://' + request.hostname + request.url);
+  }
+});
 
 // Tell our web server which file folder to serve
 app.use(express.static('public'));
