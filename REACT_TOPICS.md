@@ -1,5 +1,5 @@
-# React Lunch & Learn Topics
-### Use the udemy video to research and breakdown the below topic points:
+ # :smiling_imp: :cyclone: :skull_and_crossbones: React Lunch & Learn Topics :satellite: :floppy_disk: :pill: :volcano:
+### Use the udemy video to research and breakdown the below topic points: 
 * remote repo push password: `hint: you use it a lot`
   * need to find a different way to authenticate because entering this password everytime I push is getting old
 * SPA
@@ -22,7 +22,6 @@
       + [Express](https://expressjs.com/en/api.html)
         + purpose of middle-ware api usage like `request.hostname` in the `server.js` file can be found at the Express api page via the link above
 * Components
-    + TODO: include a screen shot of the Weather app's component layout from Udemy video 
     + Container Components vs. Presentational Components
     + Data flow; ex: input into presentational flows up to container to set state and back down to another presentational
 * Prop
@@ -54,7 +53,7 @@
 * Stateless Functional Components:
   * Syntactic Sugar
   * Skipped video; revisit and evaulate whether it's needed for a tutorial
-* Heroku
+* :zap:Heroku:zap:
   * PaaS
   * Deploying our application so that it can run anywhere
   * Heroku CLI
