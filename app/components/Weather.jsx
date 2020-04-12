@@ -17,7 +17,7 @@ var Weather = React.createClass({
             isLoading: true,
         });
 
-        debugger; //this is how you add a break point to debug with React Dev Tools
+        // debugger; //this is how you add a break point to debug with React Dev Tools
 
         var that = this; // 'this' keyword loses context inside getTemp function 
 
@@ -35,7 +35,6 @@ var Weather = React.createClass({
         });
     },
 
-    // TODO: continue on with video 34 'Faking...' @ 7:45
     render: function() {
         var temp = this.state.temp;
         var location = this.state.location;

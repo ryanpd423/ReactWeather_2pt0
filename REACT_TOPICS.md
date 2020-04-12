@@ -59,7 +59,16 @@
   * Deploying our application so that it can run anywhere
   * Heroku CLI
     * I installed on Mac via Homebrew
+    * `heroku create`
+      * gives us a custom URL
+      * adds a new heroku remote onto our git repo
     * `git push heroku master`
       * this will push our code up to the server, build it, and deploy it
       * `heroku open` => will launch the application in a browser
       * `heroku logs` => displays logs should you have any issues
+        * `https://devcenter.heroku.com/articles/logging#view-logs`
+    * Dashboard
+      * `https://dashboard.heroku.com`
+      * login: email
+      * pw: should be saved in
+      * app name: `glacial-shelf-57392`
