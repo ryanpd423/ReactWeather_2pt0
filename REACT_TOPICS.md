@@ -65,6 +65,7 @@
       * before you run `git push heroku master`
         * if you are working on a dev branch
           * commit you changes, push them, open a PR and merge your feature into master, then checkout master locally, pull down the updated master code and then run `git push heroku master`
+            * This pushes our master branch up to the heroku remote
           * I wasn't able to get `git push heroku dev_branch` to work the first time I tried it.  By work I mean when I ran `heroku open` after I ran that command my app still wouldn't start.
             * It's probably possible to not have to be on `master` and have your latest and greatest code local before you push to rebuild your app on heroku, but at least for now this is working
             * `CI Upgrade TODO:` I think I'd want to have some CI setup so that everytime I push changes to my `feature branch` in GitHub that it rebuilds a `staging` version of heroku and then when I merge into `master` it rebuilds the `prod` version of heroku
