@@ -78,3 +78,7 @@
       * login: email
       * pw: should be saved in
       * app name: `glacial-shelf-57392`
+  * Foundation
+    * a front-end framework like Bootstrap
+    * `https://get.foundation/sites/docs/`
+    * 

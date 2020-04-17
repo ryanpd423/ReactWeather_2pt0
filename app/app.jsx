@@ -68,6 +68,12 @@ have more functionality but w/o complex inflexible code
 // below then it is the component that gets rendered alongside the / Main index component
 // and that is why it is called an IndexRoute because it's a component that gets rendered with
 // the Index page of the SPA
+
+// Load Foundation
+require('style!css!foundation-sites/dist/foundation.min.css');
+$(document).foundation();
+// Load Foundation
+
 ReactDOM.render(
   <Router history={hashHistory}>
     <Route path="/" component={Main}>
