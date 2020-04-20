@@ -81,4 +81,12 @@
   * Foundation
     * a front-end framework like Bootstrap
     * `https://get.foundation/sites/docs/`
-    * 
+    * Grid Systems
+    * **TODO**: look for quick and easy to understand explanation of what css grid systems are and why they are helpful
+      * CSS Frameworks provide grid systems to allow web pages to adapt to changing screen sizes and re-size themselves appropriately while keeping the display rendering the correct way
+      * Page is divided up into 12 left-to-right partioned columns of "size 1"
+      * Ex: `<div className="column medium-6 large-4 small-centered">`
+        * when the page size is medium the screen is divided into two columns of size 6 (`12/2 = 6`)
+        * when the page size is large the screen is divided into three columns of size 4 (`12/3 = 4`)
+        * when the page is small the screen has 12 columns of "size 1"
+      * 
