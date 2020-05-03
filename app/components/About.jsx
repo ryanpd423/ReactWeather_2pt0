@@ -34,6 +34,14 @@ var About = React.createClass({
                             </li>
                         </ul>
                     </div>
+                    <div>
+                        <p>Helpful related articles: </p>
+                    </div>
+                    <ul>
+                        <li>
+                            <a href="https://www.freecodecamp.org/news/an-intro-to-webpack-what-it-is-and-how-to-use-it-8304ecdc3c60/">An intro to Webpack: what it is and how to use it</a>
+                        </li>
+                    </ul>
                 </div>
             </div>
         )

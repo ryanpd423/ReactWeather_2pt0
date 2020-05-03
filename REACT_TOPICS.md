@@ -89,4 +89,4 @@
         * when the page size is medium the screen is divided into two columns of size 6 (`12/2 = 6`)
         * when the page size is large the screen is divided into three columns of size 4 (`12/3 = 4`)
         * when the page is small the screen has 12 columns of "size 1"
-      * 
+      * test :warning:
