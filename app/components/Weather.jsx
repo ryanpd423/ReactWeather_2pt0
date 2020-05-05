@@ -1,6 +1,7 @@
 var React = require('react');
 var WeatherForm = require('WeatherForm');
 var WeatherMessage = require('WeatherMessage');
+var ErrorModal = require('ErrorModal');
 var openWeatherMapApi = require('openWeatherMapApi');
 
 var Weather = React.createClass({
@@ -15,6 +16,7 @@ var Weather = React.createClass({
 
         this.setState({
             isLoading: true,
+            errorMessage: undefined
         });
 
         // debugger; //this is how you add a break point to debug with React Dev Tools
@@ -27,11 +29,11 @@ var Weather = React.createClass({
                 temp: temp,
                 isLoading: false
             });
-        }, function (errorMessage) {
+        }, function (e) {
             that.setState({
                 isLoading: false,
+                errorMessage: e.message
             });
-            alert(errorMessage);
         });
     },
 
@@ -39,12 +41,22 @@ var Weather = React.createClass({
         var temp = this.state.temp;
         var location = this.state.location;
         var isLoading = this.state.isLoading;
+        var errorMessage = this.state.errorMessage;
 
-        function renderMessage () {
+        function renderMessage() {
             if (isLoading) {
                 return <h2 className="text-center">Fetching Weather...</h2>
             } else if ((temp && location)) {
                 return <WeatherMessage temp={temp} location={location}/>;
+            }
+        }
+
+        function renderError(){
+            if (typeof errorMessage === 'string') {
+
+                return (
+                    <ErrorModal></ErrorModal>
+                );
             }
         }
 
@@ -53,6 +65,7 @@ var Weather = React.createClass({
                 <h1 className="text-center">Get Weather</h1>
                 <WeatherForm onSearch={this.handleSearch}/>
                 {renderMessage()}
+                {renderError()}
             </div>
         )
     }

@@ -94,3 +94,10 @@
     * Found out I can replace babel with Typescript!
 * [Measure your app's performance!](https://web.dev/measure/)
   *  `This site is AWESOME!!`
+*  Component Lifecycle Methods :earth_americas:
+   *  `componentWillMount()`
+      *  :zap: called before your componet is EVER rendered and is where you can set your state
+   *  `componentDidMount()`
+      *  :zap: called after the component elements get rendered in the dom meaning you can tweak any of the actual dom elements now
+   *  both automatically called by React
+   *  [Component Lifecycle](https://reactjs.org/docs/react-component.html#the-component-lifecycle)
