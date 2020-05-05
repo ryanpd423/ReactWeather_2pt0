@@ -78,7 +78,7 @@
       * login: email
       * pw: should be saved in
       * app name: `glacial-shelf-57392`
-  * Foundation
+* Foundation
     * a front-end framework like Bootstrap
     * `https://get.foundation/sites/docs/`
     * Grid Systems
@@ -89,4 +89,8 @@
         * when the page size is medium the screen is divided into two columns of size 6 (`12/2 = 6`)
         * when the page size is large the screen is divided into three columns of size 4 (`12/3 = 4`)
         * when the page is small the screen has 12 columns of "size 1"
-      * test :warning:
+* [Create Apps with Parcel or WebPack](https://createapp.dev/webpack)
+    * `This site is AWESOME!!`
+    * Found out I can replace babel with Typescript!
+* [Measure your app's performance!](https://web.dev/measure/)
+  *  `This site is AWESOME!!`
