@@ -101,3 +101,4 @@
       *  :zap: called after the component elements get rendered in the dom meaning you can tweak any of the actual dom elements now
    *  both automatically called by React
    *  [Component Lifecycle](https://reactjs.org/docs/react-component.html#the-component-lifecycle)
+*  [PropTypes](https://reactjs.org/docs/typechecking-with-proptypes.html)

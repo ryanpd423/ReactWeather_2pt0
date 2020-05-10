@@ -13,8 +13,8 @@ module.exports = {
             } else {
                 return response.data.main.temp;
             }
-        }, function (response) {
-            throw new Error(response.data.message);
+        }, function (err) {
+            throw new Error('Error: Unable to fetch weather for that location');
         });
     }
 };
