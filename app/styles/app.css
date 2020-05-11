@@ -1,0 +1,13 @@
+.page-title {
+    margin-top: 6.5rem;
+    margin-bottom: 1.5rem;
+}
+
+.about-page-title {
+    margin-top: 2.5rem;
+    margin-bottom: 1.5rem;
+}
+
+input[type=search] {
+    box-shadow: none;
+}

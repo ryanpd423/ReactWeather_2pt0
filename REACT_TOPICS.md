@@ -102,3 +102,8 @@
    *  both automatically called by React
    *  [Component Lifecycle](https://reactjs.org/docs/react-component.html#the-component-lifecycle)
 *  [PropTypes](https://reactjs.org/docs/typechecking-with-proptypes.html)
+*  Custom CSS - Overriding the default behavior of the CSS framework you're using
+   *  If you are getting a module error after adding a new alias to your `webpack.config.js` just try restarting your `webpack -w` bundling agent
+   *  the `app.css` file has css code in it that will let us override the default behavior of our css framework, Foundation.
+   *  the `app.css` file has to be referenced in our `app.jsx` file for React to include it in the application
+*  
