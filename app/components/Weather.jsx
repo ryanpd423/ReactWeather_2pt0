@@ -21,7 +21,11 @@ var Weather = React.createClass({
             temp: undefined
         });
 
-        // debugger; //this is how you add a break point to debug with React Dev Tools
+        // This code, `debugger;`, is how you add a break point to debug with React Dev Tools
+        // 1) place the code `debugger;` on whatever line you'd like the code to stop while the application is running
+        // 2) visit the URL and trigger code that contains the debugger code and the dev tools should
+        // hit that breakpoint
+        // debugger;
 
         var that = this; // 'this' keyword loses context inside getTemp function 
 

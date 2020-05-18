@@ -112,3 +112,4 @@
    *  `state` is something that a component can change, but `props` are something that a component can not change
    *  BUT a parent can always update a child's `props`
    *  React Router is going to automatically update the props in Weather.jsx when the url changes, we just have to listen for those changes and fire a function that does something we desire to happen
+*  `ErrorModal.jsx` has unusual `render()` and `componentDidMount()` methods because we had to solve an issue introduced by the `Foundation` CSS framework.  When we call Foundation's open modal code in the componentDidFunction() function it manipulates the DOM outside of React and React doesn't work well with 3rd party libraries that are going to be updating the `DOM` like that.
