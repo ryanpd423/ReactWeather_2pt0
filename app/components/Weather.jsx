@@ -16,7 +16,9 @@ var Weather = React.createClass({
 
         this.setState({
             isLoading: true,
-            errorMessage: undefined
+            errorMessage: undefined,
+            location: undefined,
+            temp: undefined
         });
 
         // debugger; //this is how you add a break point to debug with React Dev Tools
@@ -35,6 +37,24 @@ var Weather = React.createClass({
                 errorMessage: e.message
             });
         });
+    },
+
+    componentDidMount: function() {
+        var location = this.props.location.query.location; // location is one of the query parameters in our url
+
+        if (location && location.length > 0) {
+            this.handleSearch(location);
+            window.location.hash = '#/';
+        }
+    },
+
+    componentWillReceiveProps: function(newProps) {
+        var location = newProps.location.query.location; // location is one of the query parameters in our url
+
+        if (location && location.length > 0) {
+            this.handleSearch(location);
+            window.location.hash = '#/';
+        }
     },
 
     render: function() {

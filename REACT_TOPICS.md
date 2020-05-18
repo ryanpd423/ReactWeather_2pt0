@@ -99,6 +99,7 @@
       *  :zap: called before your componet is EVER rendered and is where you can set your state
    *  `componentDidMount()`
       *  :zap: called after the component elements get rendered in the dom meaning you can tweak any of the actual dom elements now
+      *  the method itself is fired onced the component is rendered or "mounted" to the DOM
    *  both automatically called by React
    *  [Component Lifecycle](https://reactjs.org/docs/react-component.html#the-component-lifecycle)
 *  [PropTypes](https://reactjs.org/docs/typechecking-with-proptypes.html)
@@ -107,4 +108,7 @@
    *  the `app.css` file has css code in it that will let us override the default behavior of our css framework, Foundation.
    *  the `app.css` file has to be referenced in our `app.jsx` file for React to include it in the application
 *  [SCSS - A CSS Preprocessor](https://sass-lang.com/)
-*  
+*  `componentWillReceiveProps` is function built into React to help us work with props that have changed since they were passed into the child component.
+   *  `state` is something that a component can change, but `props` are something that a component can not change
+   *  BUT a parent can always update a child's `props`
+   *  React Router is going to automatically update the props in Weather.jsx when the url changes, we just have to listen for those changes and fire a function that does something we desire to happen
